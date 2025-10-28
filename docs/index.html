@@ -7,6 +7,8 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
 </head>
 <body>
   <div id="app"></div>
@@ -15,16 +17,28 @@
       name: '',
       repo: '',
       loadSidebar: true,
-      subMaxLevel: 2
+      subMaxLevel:1,
+      toc: {
+        scope: '.markdown-section',
+        headings: 'h1, h2, h3',
+        title: 'Table of Contents',
+      },
+      // 'page-toc': {
+      //   tocMaxLevel: 3,
+      //   target: 'h1, h2, h3'
+      // },
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- emojis -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <!-- docsify-latex -->
   <script src="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
   <script src="//cdn.jsdelivr.net/npm/marked@4"></script>
   <!-- CDN files for docsify-katex -->
   <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+  <!-- docsify-toc -->
+  <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
 </body>
 </html>
